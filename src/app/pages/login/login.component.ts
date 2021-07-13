@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  loginUser = {
+    'email': '',
+    'password': '',
+    'role': 'auth'
+  }
+
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  loginFormSubmit() {
+
+    if (this.loginUser.role == 'admin') {
+      this.router.navigate(['admin']);
+    } else if (this.loginUser.role == 'auth') {
+      this.router.navigate(['auth']);
+    }
   }
 
 }
