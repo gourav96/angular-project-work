@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RegisterComponent } from './pages/register/register.component';
 
+
 const routes: Routes = [
   {
     path: 'login',
@@ -10,7 +11,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'signup',
+    path: 'register',
     component: RegisterComponent,
     pathMatch: 'full'
   }
