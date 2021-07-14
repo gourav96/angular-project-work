@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
   }
 
   loginFormSubmit() {
-
     if (this.loginUser.role == 'admin') {
       this.router.navigate(['admin']);
     } else if (this.loginUser.role == 'auth') {
